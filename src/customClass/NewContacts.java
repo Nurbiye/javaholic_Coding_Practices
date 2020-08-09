@@ -18,11 +18,12 @@ public class NewContacts {
             String company=sc.nextLine();
             System.out.println("Please enter your contact "+firstName+"'s phone number");
             System.out.println("'Please only enter the 10 digits'");
-            int phone=sc.nextInt();
-            while(String.valueOf(phone).length()!=10){
+            long phone=sc.nextLong();
+            String phoneNumber=String.valueOf(phone);
+            while(String.valueOf(phone).length() != 10){
                 System.out.println("Invalid Phone number");
                 System.out.println("'Please only enter the 10 digits'");
-                phone=sc.nextInt();
+                phone=sc.nextLong();
             }
             System.out.println("Please enter your contact "+firstName+"'s email address");
             String emails=sc.next();
