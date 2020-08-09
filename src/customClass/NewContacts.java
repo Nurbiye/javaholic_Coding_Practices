@@ -7,16 +7,16 @@ public class NewContacts {
         Scanner sc=new Scanner(System.in);
         Contacts contact=new Contacts();
         ArrayList<Contacts>contactList;
-        int count=1;
+
         while(true){
-            System.out.println("Please enter your contact "+count+"'s first name: ");
+            System.out.println("Please enter your contact's first name: ");
             String firstName=sc.next();
-            System.out.println("Please enter your contact "+count+"'s last name: ");
+            System.out.println("Please enter your contact "+firstName+"'s last name: ");
             String lastName=sc.next();
             sc.nextLine();
-            System.out.println("Please enter your contact "+count+"'s company name:");
+            System.out.println("Please enter your contact "+firstName+"'s company name:");
             String company=sc.nextLine();
-            System.out.println("Please enter your contact "+count+"'s phone number");
+            System.out.println("Please enter your contact "+firstName+"'s phone number");
             System.out.println("'Please only enter the 10 digits'");
             int phone=sc.nextInt();
             while(String.valueOf(phone).length()!=10){
@@ -24,14 +24,14 @@ public class NewContacts {
                 System.out.println("'Please only enter the 10 digits'");
                 phone=sc.nextInt();
             }
-            System.out.println("Please enter your contact "+count+"'s email address");
+            System.out.println("Please enter your contact "+firstName+"'s email address");
             String emails=sc.next();
             while(!(emails.contains("@")&&emails.contains("."))){
                 System.out.println("Invalid email");
                 System.out.println("Please enter valid email and it has to include '@'");
                 emails=sc.next();
             }
-            System.out.println("Please enter your contact "+count+"'s date of birth");
+            System.out.println("Please enter your contact "+firstName+"'s date of birth");
             System.out.println("Please enter as 'mm/dd/yyyy' format only");
             String DOB=sc.next();
             while(DOB.length()!=10){
@@ -43,11 +43,11 @@ public class NewContacts {
             String toContinue=sc.next();
             if(toContinue.equalsIgnoreCase("no")){
                 for(Contacts each:contactList){
-                    System.out.println(each.firstName+" "+each.lastName);
-                    System.out.println(each.company);
-                    System.out.println(each.phoneNumber);
-                    System.out.println(each.emails);
-                    System.out.println(each.DOB);
+                    System.out.println("Full Name: "+each.firstName+" "+each.lastName);
+                    System.out.println("Company: "+each.company);
+                    System.out.println("Phone number:"+each.phoneNumber);
+                    System.out.println("Email: "+each.emails);
+                    System.out.println("Date of Birth: "+each.DOB);
                 }
                 break;
             }
