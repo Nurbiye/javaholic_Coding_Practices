@@ -13,7 +13,7 @@ public class Contacts {
     String DOB;
 
 
-    public  ArrayList<customClass.Contacts> contactBuilder(String firstName, String lastName, String company, String phoneNumber, String emails, String DOB ){
+    public  ArrayList<customClass.Contacts> contactBuilder(String firstName, String lastName, String company, int phone, String emails, String DOB ){
         ArrayList<customClass.Contacts>contactList=new ArrayList<>();
         customClass.Contacts contact=new customClass.Contacts();
         firstName=firstName.substring(0,1).toUpperCase()+ firstName.substring(1).toLowerCase();
@@ -23,6 +23,7 @@ public class Contacts {
         int space=company.indexOf(" ");
         company=company.substring(0,1).toUpperCase()+company.substring(1);
         contact.company=company;
+        phoneNumber=String.valueOf(phone);
         phoneNumber="+1 ("+phoneNumber.substring(0,3)+") "+phoneNumber.substring(3,6)+"-"+phoneNumber.substring(6);
         contact.phoneNumber=phoneNumber;
         emails=emails.toLowerCase();

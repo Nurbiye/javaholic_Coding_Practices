@@ -18,11 +18,11 @@ public class NewContacts {
             String company=sc.nextLine();
             System.out.println("Please enter your contact "+count+"'s phone number");
             System.out.println("'Please only enter the 10 digits'");
-            String phoneNumber=sc.next();
-            while(phoneNumber.length()!=10){
+            int phone=sc.nextInt();
+            while(String.valueOf(phone).length()!=10){
                 System.out.println("Invalid Phone number");
                 System.out.println("'Please only enter the 10 digits'");
-                phoneNumber= sc.next();
+                phone=sc.nextInt();
             }
             System.out.println("Please enter your contact "+count+"'s email address");
             String emails=sc.next();
@@ -38,7 +38,7 @@ public class NewContacts {
                 System.out.println("Invalid format, Please re-enter");
                 DOB=sc.next();
             }
-            contactList=contact.contactBuilder(firstName,lastName,company,phoneNumber,emails,DOB);
+            contactList=contact.contactBuilder(firstName,lastName,company,phone,emails,DOB);
             System.out.println("Would you like to add more contacts? Please enter 'Yes or No' ");
             String toContinue=sc.next();
             if(toContinue.equalsIgnoreCase("no")){
