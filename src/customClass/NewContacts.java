@@ -26,7 +26,7 @@ public class NewContacts {
             }
             System.out.println("Please enter your contact "+count+"'s email address");
             String emails=sc.next();
-            while(!(emails.contains("@")&&emails.contains(".com"))){
+            while(!(emails.contains("@")&&emails.contains("."))){
                 System.out.println("Invalid email");
                 System.out.println("Please enter valid email and it has to include '@'");
                 emails=sc.next();
