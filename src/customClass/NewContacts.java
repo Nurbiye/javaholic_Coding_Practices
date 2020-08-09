@@ -55,49 +55,5 @@ public class NewContacts {
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        ArrayList<Contacts>contactList=new ArrayList<>();
-//        int i=1; // i stand for number of contact
-//
-//        while(true) {
-//            Contacts contact=new Contacts();
-//
-//            System.out.println("Enter the first name of your contact"+i+": ");
-//            contact.firstName = sc.next();
-//            System.out.println("Enter the  last name of your contact"+i+": ");
-//            contact.lastName = sc.next();
-//            sc.nextLine();
-//            System.out.println("Enter the company name of your contact"+i+": ");
-//            contact.company = sc.nextLine();
-//            System.out.println("Enter the phone number of your contact"+i + ": "+
-//                    "\nformat requirement: digit only and max of 10 digits");
-//            contact.phoneNumber = sc.next();
-//            System.out.println("Enter the email address of your contact"+i+": ");
-//            contact.emails = sc.next();
-//            System.out.println("Enter the date of birth 'MM/DD/YYYY' of your contact"+i+": ");
-//            contact.DOB=sc.next();
-//            i++;
-//            contactList.add(contact);
-//            System.out.println("Do you want to continue? enter 'yes' or 'no'");
-//            String ifContinue=sc.next();
-//            if(ifContinue.equalsIgnoreCase("no")){
-//                System.out.println("Thank you and here is your contact list");
-//                break;
-//            }
-//
-//        }
-
     }
 }
