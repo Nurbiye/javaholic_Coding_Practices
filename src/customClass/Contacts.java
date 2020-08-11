@@ -15,15 +15,14 @@ public class Contacts {
 
     public  ArrayList<customClass.Contacts> contactBuilder(String firstName, String lastName, String company, long phone, String emails, String DOB ){
         ArrayList<customClass.Contacts>contactList=new ArrayList<>();
-        customClass.Contacts contact=new customClass.Contacts();
+        Contacts contact=new customClass.Contacts();
         firstName=firstName.substring(0,1).toUpperCase()+ firstName.substring(1).toLowerCase();
         contact.firstName=firstName;
         lastName=lastName.substring(0,1).toUpperCase()+ lastName.substring(1).toLowerCase();
         contact.lastName=lastName;
-        int space=company.indexOf(" ");
         company=company.substring(0,1).toUpperCase()+company.substring(1);
         contact.company=company;
-        phoneNumber=String.valueOf(phone);
+        phoneNumber=""+phone;
         phoneNumber="+1 ("+phoneNumber.substring(0,3)+") "+phoneNumber.substring(3,6)+"-"+phoneNumber.substring(6);
         contact.phoneNumber=phoneNumber;
         emails=emails.toLowerCase();
